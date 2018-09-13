@@ -12,6 +12,18 @@
  */
 const sumElements = arr => {
   /* your logic here...*/
+  try {
+    if (arr.some(NaN)) throw "Nan";
+  } catch (error) {
+    return error;
+  }
+  if (typeof arr == "string") {
+    let arrOfNumbers = Number(arr);
+    let num = arr.reduce((a, b) => a + b);
+    return num;
+  } else if (arr === NaN) {
+    return (arr = 2);
+  }
 };
 
 export default sumElements;

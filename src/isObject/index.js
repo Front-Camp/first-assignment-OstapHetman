@@ -9,6 +9,18 @@
  */
 const isObject = data => {
   /* your logic here...*/
+  if (
+    typeof data === "string" ||
+    typeof data === "number" ||
+    typeof data === "object" ||
+    typeof data === "undefined" ||
+    typeof data === "boolean" ||
+    typeof data === "null"
+  ) {
+    return false;
+  } else {
+    return true;
+  }
 };
 
 export default isObject;
